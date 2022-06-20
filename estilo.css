@@ -1,12 +1,11 @@
 .header {
-    background-color: #b1b1b1;
+    background-color: #fa3e3e;
 }
 
 .header-area {
     padding: 20px;
 }
 .logo {
-    border: 1px solid black;
     color: black;
     display: flex;
     justify-content: center;
@@ -17,7 +16,7 @@
 }
 
 .main{
-    /* background-color: #e7e7e7; */
+    
     padding: 0!important;
 }
 
@@ -62,7 +61,7 @@
 }
 
 .header-area .nav input {
-    width: 100px;
+    width: 140px;
 }
 
 #div-search{
