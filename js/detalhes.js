@@ -1,12 +1,14 @@
 import { BASE_URL, API_KEY,IMG_URL_W500 } from './Api.js'
 
 const row = document.querySelector('#row-detalhe')
+const div_pkfilme = document.querySelector('#pkfilme')
+let pkfilme =''
 
 window.onload = async() => {
     const url_string = window.location.href;
     const url = new URL(url_string);
     const id = +url.searchParams.get("id");
-
+    pkfilme =id;
     buscarFilme(id)
 }
 
@@ -42,6 +44,12 @@ const buscarFilme = async(id) => {
 
     const divConteudo = document.createElement('div')
     divConteudo.setAttribute('class', 'col-sm-12 col-md-7')
+
+    const saiba_mais = document.createElement('a')
+    saiba_mais.setAttribute('href', `https://www.themoviedb.org/movie/${pkfilme}`)
+    saiba_mais.setAttribute('class', 'btn btn-danger')
+    saiba_mais.innerHTML='Saiba mais'
+    div_pkfilme.appendChild(saiba_mais)
 
     divImg.appendChild(img)
 
